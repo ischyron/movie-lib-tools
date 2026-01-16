@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Example tools config for direnv.
+# Recommended: copy this to .envrc.local (NOT .envrc) and adjust values.
+# Then run: direnv reload (after initial `direnv allow`).
+
+# Jellyfin
+export JELLYFIN_API_KEY="PUT_YOUR_KEY_HERE"
+export JELLYFIN_BASE_URL="http://localhost:8096"
+
+# YTS domain(s): site root or API path. Comma-separated fallbacks allowed.
+# Examples:
+#   https://www.yts-official.to
+#   https://www.yts-official.to,https://yts.rs/api/v2
+export YTS_API_BASE="https://www.yts-official.to"
+
+# Optional: 3rd-party keys used by legacy YTS enrichment (title normalization)
+# Prefer IMDb from Jellyfin; TMDb/OMDb used as fallback for legacy CSVs.
+export TMDB_API_KEY=""
+export OMDB_API_KEY=""
+
+# Default verbose logging for CLI (set to 1 to enable)
+export MLM_VERBOSE=1
